@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.releaser
+package uk.gov.hmrc.releaser.bintray
 
-package object github {
-  type CommitSha = String
-}
+case class VersionDescriptor(repo: String,
+                             artefactName: String,
+                             gitHubName: String,
+                             version: String)

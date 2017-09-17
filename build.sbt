@@ -2,10 +2,11 @@ enablePlugins(SbtAutoBuildPlugin, SbtGitVersioning)
 
 val appName = "releaser"
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.11.11"
+crossScalaVersions := Seq("2.11.11")
 
 libraryDependencies ++= Seq(
-  "com.typesafe.play" %% "play-ws" % "2.5.15",
+  "com.typesafe.play" %% "play-ws" % "2.5.16",
   "com.jsuereth" %% "scala-arm" % "1.4",
   "commons-io" % "commons-io" % "2.4",
   "com.github.scopt" %% "scopt" % "3.3.0",

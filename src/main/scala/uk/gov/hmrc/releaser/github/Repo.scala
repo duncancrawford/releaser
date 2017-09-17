@@ -14,13 +14,6 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.releaser
+package uk.gov.hmrc.releaser.github
 
-package object bintray {
-
-  case class VersionDescriptor(repo: String,
-                               artefactName: String,
-                               gitHubName: String,
-                               version: String)
-
-}
+case class Repo(value:String) extends AnyVal
