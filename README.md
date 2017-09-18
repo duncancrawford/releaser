@@ -74,8 +74,9 @@ If the artefact does NOT contain a JAR matching the naming conventions, you must
 All artefacts must contain a .POM file, this is mandatory and cannot be omitted.
   
 
-### Coding in the Open
-Release is an integral part of how we release code in the open, more information can be found in the [Coding in the Open Manual](http://hmrc.github.io/coding-in-the-open-manual/)
+## Contributors 
+
+This based off a forked from [/hmrc/releaser](https://github.com/hmrc/releaser)
 
 ### License
  
