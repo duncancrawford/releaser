@@ -1,5 +1,6 @@
 import sbtassembly.AssemblyKeys.{assembly, assemblyJarName, assemblyMergeStrategy}
 import sbtassembly.{MergeStrategy, PathList}
+import uk.gov.hmrc.DefaultBuildSettings.targetJvm
 
 enablePlugins(SbtAutoBuildPlugin, SbtGitVersioning)
 
@@ -7,6 +8,7 @@ name := "releaser"
 
 scalaVersion := "2.11.11"
 crossScalaVersions := Seq("2.11.11")
+targetJvm := "jvm-1.8"
 
 libraryDependencies ++= Seq(
   "com.typesafe.play" %% "play-ws" % "2.5.16",
@@ -21,7 +23,14 @@ libraryDependencies ++= Seq(
 
 resolvers += Resolver.typesafeRepo("releases")
 
-BuildDescriptionSettings()
+headers := EEHeaderSettings()
+organizationHomepage := Some(url("https://www.equalexperts.com"))
+organization := "com.equalexperts"
+
+resolvers := Seq(
+  Resolver.bintrayRepo("hmrc", "releases"),
+  Resolver.typesafeRepo("releases")
+)
 
 assemblyJarName in assembly := "releaser.jar"
 
